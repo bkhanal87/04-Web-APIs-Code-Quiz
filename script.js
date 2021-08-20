@@ -44,7 +44,7 @@ let questions = [
         ]
     },
     {
-        id: 5
+        id: 5,
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
         answer: "console.log",
         options: [

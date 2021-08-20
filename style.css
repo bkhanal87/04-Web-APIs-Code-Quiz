@@ -92,5 +92,8 @@ body{
     cursor: pointer;
     border:2px solid #fff; 
 }
-
+.btn-next{
+    background-color: blueviolet;
+    color: black;
+}
 
