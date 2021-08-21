@@ -96,4 +96,7 @@ body{
     background-color: blueviolet;
     color: black;
 }
-
+.active {
+    background-color: blueviolet;
+    color: burlywood !important;
+}
