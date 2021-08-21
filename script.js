@@ -60,26 +60,37 @@ let questions = [
     },
 ];
 
+function submitForm(e) {
+    e.preventDefault();
+    let name = document.forms["welcome-form"]["name"].value;
+
+    sessionStorage.setItem("name", name);
+
+    location.href = "index.html";
+}
+
 let question_count = 0;
 let score = 0;
 
 function next() {
+    if(question_count == questions.length - 1) {
+        location.href = "end.html";
+        return;
+    }
 
     let user_answer = document.querySelector("li.option.active").innerHTML;
     
-    if(user_answer == questions[question_count].answer){
-        score += 10;
-    } else {
-        score -= 10;
+    if (user_answer == questions[question_count].answer) {
+        point += 10;
+        sessionStorage.setItem("points", point);
     }
-    sessionStorage.setItem("scores", score);
-        question_count++;
-        show(question_count);
+    question_count++;
+    show(question_count);
 }
-
-
+    
 
 function show(count) {
+
     let question = document.getElementById("questions");
 
     question.innerHTML = `
@@ -92,13 +103,16 @@ function show(count) {
     </ul>
 
     `;
+
+    toggleActive();
 }
+
 function toggleActive() {
     let option = document.querySelectorAll("li.option");
 
     for(let i=0; i< option.length; i++) {
         option[i].onclick = function() {
-            for(let j=0; j<option.length; j++) {
+            for(let j=0; j< option.length; j++) {
                 if(option[j].classList.contains("active")) {
                     option[j].classList.remove("active");
                 }
