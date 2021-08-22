@@ -73,17 +73,18 @@ let question_count = 0;
 let score = 0;
 
 function next() {
-    if(question_count == questions.length - 1) {
-        location.href = "end.html";
-        return;
-    }
-
     let user_answer = document.querySelector("li.option.active").innerHTML;
-    
+
     if (user_answer == questions[question_count].answer) {
         point += 10;
         sessionStorage.setItem("points", point);
     }
+
+    if (question_count == questions.length - 1) {
+        location.href = "end.html";
+        return;
+    }
+
     question_count++;
     show(question_count);
 }
