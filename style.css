@@ -2,23 +2,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
-body{
+
+body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.leftside{
+/* .leftside{
     font-size: 10px;
     font-weight: lighter;
+    align-items: left;
 }
+
 .rightside{
     display: flex;
     justify-content: right;
     align-items: center;
-}
+}  */
 
-.wrapper{
+/* .wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,8 +36,8 @@ body{
     color: blueviolet;
 }
 .coverpage button:hover{
-    cursor: pointer;
-}
+    cursor: pointer; */
+} */
 
 .quiz{
     border-radius: 3px;
@@ -61,8 +63,8 @@ body{
     padding: 50px;
     background-color: lightblue;
     
-
 }
+
 .quiz-user{
     display: flex;
     align-items: center;
@@ -91,10 +93,14 @@ body{
 .option:hover{
     cursor: pointer;
     border:2px solid #fff; 
+    color: #341f97;
 }
 .btn-next{
-    background-color: blueviolet;
-    color: black;
+    background-color: blue;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 27px;
 }
 .active {
     background-color: blueviolet;
