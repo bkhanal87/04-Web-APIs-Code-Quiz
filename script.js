@@ -73,16 +73,16 @@ let question_count = 0;
 let score = 0;
 
 function next() {
-    let user_answer = document.querySelector("li.option.active").innerHTML;
-    console.log(user_answer);
-    if (user_answer == questions[question_count].answer) {
-        score += 10;
-        sessionStorage.setItem("scores", score);
-    }
-
     if (question_count == questions.length - 1) {
         location.href = "end.html";
         return;
+    }
+
+    let user_answer = document.querySelector("li.option.active").innerHTML;
+
+    if (user_answer == questions[question_count].answer) {
+        score += 10;
+        sessionStorage.setItem("scores", score);
     }
 
     question_count++;
@@ -117,8 +117,8 @@ function toggleActive() {
                 if(option[j].classList.contains("active")) {
                     option[j].classList.remove("active");
                 }
-                option[i].classList.add("active");
             }
+                option[i].classList.add("active");
         }
     }
 }
