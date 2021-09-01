@@ -8,7 +8,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* .leftside{
+.leftside{
     font-size: 10px;
     font-weight: lighter;
     align-items: left;
@@ -18,9 +18,9 @@ body {
     display: flex;
     justify-content: right;
     align-items: center;
-}  */
+}  
 
-/* .wrapper{
+.wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,8 +36,8 @@ body {
     color: blueviolet;
 }
 .coverpage button:hover{
-    cursor: pointer; */
-} */
+    cursor: pointer; 
+} 
 
 .quiz{
     border-radius: 3px;

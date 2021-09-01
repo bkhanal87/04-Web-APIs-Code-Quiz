@@ -74,10 +74,10 @@ let score = 0;
 
 function next() {
     let user_answer = document.querySelector("li.option.active").innerHTML;
-
+    console.log(user_answer);
     if (user_answer == questions[question_count].answer) {
-        point += 10;
-        sessionStorage.setItem("points", point);
+        score += 10;
+        sessionStorage.setItem("scores", score);
     }
 
     if (question_count == questions.length - 1) {
