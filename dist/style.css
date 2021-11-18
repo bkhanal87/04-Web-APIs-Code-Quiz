@@ -5,22 +5,8 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Lato', sans-serif;
 }
-title{
-    font-family: 'Times New Roman', Times, serif;
-}
-.leftside{
-    font-size: 10px;
-    font-weight: lighter;
-    align-items: left;
-}
-
-.rightside{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}  
 
 .wrapper{
     display: flex;
@@ -30,7 +16,48 @@ title{
     height: 100vh;
     color: blueviolet;
 }
-.coverpage button{
+
+.welcome_text {
+    width: 400px;
+}
+
+.welcome_form input,
+.welcome_form button {
+    display: block;
+    width: 100%;
+}
+
+.welcome_form input {
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.welcome_form button {
+    font-size: 22px;
+    padding: 20px 0;
+    background-color: #fff;
+    color: #341f97;
+    border-radius: 100px;
+}
+
+.welcome_form button:hover {
+    transform: translate(-5px);
+    cursor: pointer;
+}
+
+.welcome_form input:focus,
+.welcome_form button:focus {
+    outline: none;
+
+}
+
+
+/* .coverpage button{
     display: flex;
     padding: 0 30px;
     align-items: center;
@@ -39,7 +66,7 @@ title{
 }
 .coverpage button:hover{
     cursor: pointer; 
-} 
+}  */
 
 .quiz{
     border-radius: 3px;
@@ -107,4 +134,4 @@ title{
 .active {
     background-color: blueviolet;
     color: burlywood !important;
-}
+} */
