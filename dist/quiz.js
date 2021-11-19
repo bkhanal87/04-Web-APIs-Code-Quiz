@@ -1,3 +1,9 @@
+window.onload = function() {
+    show();
+}
+
+
+
 let questions = [
   {
     id: 1,
@@ -61,5 +67,18 @@ let question_count = 0;
 
 function next() {
     question_count++;
-    console.log(question_count);
+    show(question_count);
+}
+
+function show(count) {
+    let question = document.getElementById("questions");
+
+    question.innerHTML = `<h2>${questions[count].question}</h2>
+    <ul class="option_group">
+    <li class="option">${questions[count].options[0]}</li>
+    <li class="option">${questions[count].options[1]}</li>
+    <li class="option">${questions[count].options[2]}</li>
+    <li class="option">${questions[count].options[3]}</li>
+    </ul>
+    `;
 }
