@@ -9,7 +9,7 @@ let questions = [
     id: 1,
     question: "Commonly used data types DO NOT include:",
     answer: "alerts",
-    options: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
+    options: ["1. strings", "2. booleans", "3. alerts", "4. numbers"]
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ let questions = [
       "2. curly brackets",
       "3. parantheses",
       "4. square brackets",
-    ],
+    ]
   },
   {
     id: 3,
@@ -31,14 +31,14 @@ let questions = [
       "2. other arrays",
       "3. booleans",
       "4. all of the above",
-    ],
+    ]
   },
   {
     id: 4,
     question:
       "String values must be enclosed within _____when being assigned to variables",
     answer: "quotes",
-    options: ["1. commas", "2. curly brackets", "3. quotes", "4. paranthesis"],
+    options: ["1. commas", "2. curly brackets", "3. quotes", "4. paranthesis"]
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ let questions = [
       "2. terminal/bash",
       "3. for loops",
       "4. console.log",
-    ],
+    ]
   },
 ];
 
@@ -66,6 +66,9 @@ function submitForm(e) {
 let question_count = 0;
 
 function next() {
+
+  // let user_answer = document.querySelector("li.option.active").innerHTML;
+  // console.log(user_answer);
     question_count++;
     show(question_count);
 }
@@ -81,4 +84,21 @@ function show(count) {
     <li class="option">${questions[count].options[3]}</li>
     </ul>
     `;
+
+    toggleActive();
+}
+
+function toggleActive() {
+  let option = document.querySelectorAll("li.option");
+
+  for (let i=0; i< option.length; i++) {
+    option[i].onclick = function() {
+      for( let j=0; j<option.length; j++) {
+        if(option[j].classList.contains("active")) {
+          option[j].classList.remove("active");
+        }
+      }
+      option[i].classList.add("active");
+    }
+  }
 }
