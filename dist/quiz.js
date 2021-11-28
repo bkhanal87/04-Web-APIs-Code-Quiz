@@ -75,6 +75,8 @@ function next() {
    }
 
   if(question_count == questions.length - 1) {
+    sessionStorage.setItem("time", `${minutes} minutes and ${seconds} seconds`);
+    clearInterval(mytime);
     location.href = "end.html";
     return;
   }
