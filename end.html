@@ -5,22 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
+    <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
     <div class="wrapper">
-        <div class="Completed">
-            <h1>All done!</h1>
-            <p> Your final score is</p>
-        </div>
-    </div>
-    <form>
         <div>
-            <label>Enter Initials</label>
-            <input>
+            <h3 class="user_name">All done! John Doe</h3>
+            <p class="user_points">Your Points: <span class="points">30</span></p>
+            <p class="user_time">Time <span class="time">0 minutes seconds</span></p>
+            <h3>Enter Initials</h3>
+            <input id="initials_input" type="text" placeholder="Enter your initials here">
+            <div><button id="submit_button">Submit</button></div>
         </div>
-        <button>submit</button>
-
-    </form>
-    <script src="quiz.js"></script>
+        
+    </div>
+    <script src="dist/quiz.js"></script>
 </body>
 </html>

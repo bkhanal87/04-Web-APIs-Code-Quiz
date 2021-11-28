@@ -135,3 +135,11 @@ body {
     color: #fff !important;
 
 }
+
+.user_name,
+.user_points,
+.user_time {
+    color:black;
+    text-align: center;
+    margin-top: 15px;
+}
