@@ -1,5 +1,5 @@
 window.onload = function() {
-    show();
+    show(0);
 }
 
 
@@ -64,11 +64,16 @@ function submitForm(e) {
 }
 
 let question_count = 0;
+let point = 0;
 
 function next() {
 
-  // let user_answer = document.querySelector("li.option.active").innerHTML;
-  // console.log(user_answer);
+  let user_answer = document.querySelector("li.option.active").innerHTML;
+
+  if(user_answer == questions[question_count].answer) {
+   point += 10;
+   sessionStorage.setItem("points", point);
+  }
     question_count++;
     show(question_count);
 }
